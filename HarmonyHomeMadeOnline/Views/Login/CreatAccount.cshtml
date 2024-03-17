@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Household Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .logo img {
+                width: 150px; /* Adjust as needed */
+            }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://www.shutterstock.com/image-vector/safety-care-logo-design-house-260nw-1722042355.jpg" alt="Household Shop Logo">
+        </div>
+        <h2>Create Your Household Shop Account</h2>
+        <p>Get started shopping for all your household needs.</p>
+
+        @using (Html.BeginForm("InsertUser", "Login", FormMethod.Post))
+        {
+            <form action="#" method="post">
+
+                <input type="text" name="userName" placeholder="Full Name" required>
+                <input type="email" name="userEmail" placeholder="Email Address" required>
+                <input type="password" name="userPass" placeholder="Create Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Passwrd" required>
+                <input type="text" name="id" placeholder="ID Number" required>
+                <button type="submit">Create Account</button>
+            </form>
+        }
+        <div class="login-link">
+            <p>Already have an account? <a href="~/Login/ShowLoginPage">Sign In</a></p>
+        </div>
+    </div>
+</body>
+</html>
